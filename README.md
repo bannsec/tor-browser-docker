@@ -1,5 +1,5 @@
 # tor-browser-docker
-Docker build for the tor browser
+Docker build for the tor browser. This should auto-build so you only need to add the run function below and you should always have an updated tor browser.
 
 # Run
 ```bash
