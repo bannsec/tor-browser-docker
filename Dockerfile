@@ -15,7 +15,7 @@ RUN URL=`curl https://www.torproject.org/download/ | grep -i downloadLink | egre
     curl -L https://www.torproject.org/$URL > browser && \
     tar xf browser && rm browser && \
     useradd -m -s /bin/bash tor && \
-    chown -R tor /tor-browser_en-US
+    chown -R tor /tor-browser
 
 USER tor
 
