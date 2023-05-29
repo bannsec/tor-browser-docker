@@ -19,4 +19,4 @@ RUN URL=`curl https://www.torproject.org/download/ | grep -i downloadLink | egre
 
 USER tor
 
-CMD ["/tor-browser_en-US/Browser/start-tor-browser"]
+CMD ["/tor-browser/Browser/start-tor-browser"]
