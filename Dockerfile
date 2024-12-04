@@ -11,7 +11,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 RUN apt update && apt dist-upgrade -y && \
     apt install -y curl xz-utils zenity libdbus-glib-1-2 libxt6
 
-RUN URL=`curl https://www.torproject.org/download/ | grep -i downloadLink | egrep -o 'href="(.+?)linux64(.+?)"' | head -1 | cut -f 2 -d '"'` && \
+RUN URL=`curl https://www.torproject.org/download/ | grep -i downloadLink | egrep -o 'href="(.+?)linux-x86_64(.+?)"' | head -1 | cut -f 2 -d '"'` && \
     curl -L https://www.torproject.org/$URL > browser && \
     tar xf browser && rm browser && \
     useradd -m -s /bin/bash tor && \
