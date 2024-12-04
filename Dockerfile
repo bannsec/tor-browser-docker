@@ -9,7 +9,7 @@ ENV TZ=America/New_York
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 RUN apt update && apt dist-upgrade -y && \
-    apt install -y curl xz-utils zenity libdbus-glib-1-2 libxt6
+    apt install -y curl xz-utils zenity libdbus-glib-1-2 libxt6 libgtk-3-0 libasound2t64
 
 RUN URL=`curl https://www.torproject.org/download/ | grep -i downloadLink | egrep -o 'href="(.+?)linux-x86_64(.+?)"' | head -1 | cut -f 2 -d '"'` && \
     curl -L https://www.torproject.org/$URL > browser && \
